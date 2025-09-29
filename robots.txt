@@ -6,7 +6,7 @@ Allow: /
 Disallow: 
 
 # Sitemap location
-Sitemap: sitemap.xml
+Sitemap: https://stakepokers.com/sitemap.xml
 
 # Crawl-delay for responsible crawling
 Crawl-delay: 1
