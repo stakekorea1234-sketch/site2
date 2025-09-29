@@ -480,6 +480,218 @@
             max-height: 500px;
         }
         
+        /* Crypto Guide Section */
+        .crypto-guide-section {
+            margin: 80px 0;
+        }
+        
+        .crypto-steps-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin: 50px 0;
+        }
+        
+        .crypto-step-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 30px;
+            transition: all 0.3s;
+        }
+        
+        .crypto-step-card:hover {
+            background: rgba(255,255,255,0.06);
+            transform: translateY(-3px);
+            border-color: #00ff88;
+        }
+        
+        .step-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .step-badge {
+            background: linear-gradient(45deg, #00ff88, #00ccff);
+            color: #000;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        
+        .step-header h3 {
+            font-size: 20px;
+            color: #fff;
+            margin: 0;
+        }
+        
+        .step-body p {
+            color: rgba(255,255,255,0.7);
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .crypto-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .crypto-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+        
+        .address-example {
+            background: rgba(0,0,0,0.3);
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+        
+        .address-example code {
+            color: #00ff88;
+            font-family: monospace;
+            font-size: 14px;
+        }
+        
+        .network-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 15px;
+        }
+        
+        .network-list li {
+            padding: 8px 0;
+            color: rgba(255,255,255,0.6);
+            font-size: 14px;
+        }
+        
+        .confirm-time {
+            background: rgba(0,255,136,0.1);
+            border: 1px solid rgba(0,255,136,0.3);
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 15px;
+        }
+        
+        .confirm-time span {
+            color: #00ff88;
+            font-size: 14px;
+        }
+        
+        /* Crypto Tips */
+        .crypto-tips {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 40px;
+            margin: 50px 0;
+        }
+        
+        .tips-title {
+            font-size: 24px;
+            color: #00ff88;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+        
+        .tip-card {
+            text-align: center;
+        }
+        
+        .tip-card h4 {
+            color: #fff;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        
+        .tip-card p {
+            color: rgba(255,255,255,0.6);
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        /* Exchange Recommend */
+        .exchange-recommend {
+            background: linear-gradient(135deg, rgba(0,255,136,0.1) 0%, rgba(0,204,255,0.1) 100%);
+            border-radius: 16px;
+            padding: 35px;
+            margin-top: 50px;
+        }
+        
+        .exchange-recommend h3 {
+            color: #fff;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+        
+        .exchange-recommend p {
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 20px;
+        }
+        
+        .exchange-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .exchange-list li {
+            padding: 12px 0;
+            color: rgba(255,255,255,0.8);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .exchange-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .exchange-list strong {
+            color: #00ff88;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .crypto-steps-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .tips-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .crypto-step-card {
+                padding: 25px 20px;
+            }
+            
+            .crypto-tips {
+                padding: 30px 20px;
+            }
+            
+            .exchange-recommend {
+                padding: 25px 20px;
+            }
+        }
+        
         /* Footer */
         .footer {
             text-align: center;
@@ -730,7 +942,7 @@
 <body>
     <!-- Floating Promo Bar -->
     <div class="promo-bar">
-        <div class="promo-code">CODE: AAKK</div>
+        <div class="promo-code">CODE: ＡＡＫＫ</div>
     </div>
 
     <!-- Minimal Header -->
@@ -769,8 +981,8 @@
                 </div>
                 <div class="feature-card">
                     <div class="feature-emoji">🔒</div>
-                    <h3 class="feature-title">익명성 보장</h3>
-                    <p class="feature-description">KYC 없이 바로 시작 가능. 개인정보 보호와 빠른 출금을 동시에</p>
+                    <h3 class="feature-title">안전한 보안</h3>
+                    <p class="feature-description">퀴라소 정부 공식 라이선스와 SSL 암호화로 안전한 플레이 환경 제공</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-emoji">💱</div>
@@ -804,8 +1016,8 @@
                     <div class="step-card">
                         <div class="step-number">2</div>
                         <div class="step-content">
-                            <h3>코드 AAKK 입력하기</h3>
-                            <p>가입 시 Code (Optional) 란에 AAKK를 입력합니다. 이 코드로 암호화폐 첫 입금 시 최대 $500 보너스를 받을 수 있습니다.</p>
+                            <h3>코드 ＡＡＫＫ 입력하기</h3>
+                            <p>가입 시 Code (Optional) 란에 ＡＡＫＫ를 입력합니다. 이 코드로 암호화폐 첫 입금 시 최대 $500 보너스를 받을 수 있습니다.</p>
                             <img src="crypto_register_step2.jpg" alt="코드 AAKK 입력 화면" class="step-image">
                         </div>
                     </div>
@@ -829,7 +1041,7 @@
                         <div class="step-number">5</div>
                         <div class="step-content">
                             <h3>암호화폐로 게임 시작!</h3>
-                            <p>입금이 확인되면 3,000개 이상의 게임을 암호화폐로 즐길 수 있습니다. 익명성이 보장되며 24시간 출금 가능합니다!</p>
+                            <p>입금이 확인되면 3,000개 이상의 게임을 암호화폐로 즐길 수 있습니다. 암호화폐 카지노의 매력을 경험해보세요!</p>
                             <img src="crypto_register_step5.jpg" alt="암호화폐 카지노 시작 화면" class="step-image">
                         </div>
                     </div>
@@ -861,9 +1073,9 @@
                     <h3>💱 입출금 속도</h3>
                     <ul>
                         <li>입금: 블록체인 확인 즉시 (5-10분)</li>
-                        <li>출금: 24시간 언제든 가능</li>
-                        <li>출금 한도: 제한 없음</li>
-                        <li>KYC 없이 빠른 처리</li>
+                        <li>출금: 신청 후 처리</li>
+                        <li>출금 한도: 암호화폐로 자유롭게</li>
+                        <li>빠른 입출금 처리</li>
                     </ul>
                 </div>
                 <div class="info-card">
@@ -886,40 +1098,94 @@
                 </div>
             </div>
 
-            <!-- FAQ Section -->
-            <div class="faq-section">
-                <h2 class="section-title">암호화폐 카지노 자주 묻는 질문</h2>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        암호화폐가 없어도 가입할 수 있나요?
+            <!-- Crypto Guide Section -->
+            <div class="crypto-guide-section">
+                <h2 class="section-title">암호화폐 입금 단계별 가이드</h2>
+                
+                <div class="crypto-steps-grid">
+                    <div class="crypto-step-card">
+                        <div class="step-header">
+                            <span class="step-badge">Step 1</span>
+                            <h3>암호화폐 준비</h3>
+                        </div>
+                        <div class="step-body">
+                            <p>거래소에서 Bitcoin, Ethereum, USDT 중 하나를 구매합니다. 초보자는 가격 변동이 없는 USDT를 추천합니다.</p>
+                            <div class="crypto-icons">
+                                <span class="crypto-icon">₿</span>
+                                <span class="crypto-icon">Ξ</span>
+                                <span class="crypto-icon">₮</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="faq-answer">
-                        가입은 가능하지만 게임을 하려면 암호화폐 입금이 필요합니다. 거래소에서 Bitcoin이나 USDT를 구매하거나, Stake 내 Moonpay를 통해 카드로 직접 코인을 구매할 수 있습니다.
+                    
+                    <div class="crypto-step-card">
+                        <div class="step-header">
+                            <span class="step-badge">Step 2</span>
+                            <h3>입금 주소 생성</h3>
+                        </div>
+                        <div class="step-body">
+                            <p>Stake 계정에서 'Wallet' → 'Deposit' 클릭 후 원하는 암호화폐를 선택하면 고유 입금 주소가 생성됩니다.</p>
+                            <div class="address-example">
+                                <code>0x7a9f3cd2...</code>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="crypto-step-card">
+                        <div class="step-header">
+                            <span class="step-badge">Step 3</span>
+                            <h3>네트워크 선택</h3>
+                        </div>
+                        <div class="step-body">
+                            <p>USDT는 네트워크 선택이 중요합니다. ERC-20 (이더리움), TRC-20 (트론) 중 수수료가 낮은 TRC-20을 추천합니다.</p>
+                            <ul class="network-list">
+                                <li>ERC-20: 높은 수수료, 빠른 처리</li>
+                                <li>TRC-20: 낮은 수수료, 추천</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="crypto-step-card">
+                        <div class="step-header">
+                            <span class="step-badge">Step 4</span>
+                            <h3>전송 및 확인</h3>
+                        </div>
+                        <div class="step-body">
+                            <p>복사한 주소로 암호화폐를 전송합니다. 블록체인 컨펌 후 자동으로 잔액에 반영됩니다.</p>
+                            <div class="confirm-time">
+                                <span>⏱️ 예상 시간: 5-30분</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        어떤 암호화폐가 가장 좋은가요?
-                    </div>
-                    <div class="faq-answer">
-                        초보자에게는 USDT(테더)를 추천합니다. 1:1 달러 고정이라 환율 변동 걱정이 없고, 대부분의 거래소에서 쉽게 구매할 수 있습니다. Bitcoin도 좋지만 가격 변동이 클 수 있습니다.
+                
+                <div class="crypto-tips">
+                    <h3 class="tips-title">💡 암호화폐 입금 팁</h3>
+                    <div class="tips-grid">
+                        <div class="tip-card">
+                            <h4>최소 입금액 확인</h4>
+                            <p>각 암호화폐별 최소 입금액이 있습니다. Bitcoin은 0.0001 BTC, USDT는 10 USDT 이상 입금을 권장합니다.</p>
+                        </div>
+                        <div class="tip-card">
+                            <h4>주소 재확인 필수</h4>
+                            <p>전송 전 주소를 반드시 재확인하세요. 잘못된 주소로 전송 시 복구가 불가능합니다.</p>
+                        </div>
+                        <div class="tip-card">
+                            <h4>소액 테스트 권장</h4>
+                            <p>처음 이용 시 소액으로 먼저 테스트해보는 것을 권장합니다. 정상 입금 확인 후 본격적으로 이용하세요.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        입금 후 얼마나 기다려야 하나요?
-                    </div>
-                    <div class="faq-answer">
-                        네트워크에 따라 다르지만: Bitcoin은 3개 블록 확인(30분), Ethereum은 12개 블록(3분), USDT는 사용 네트워크에 따라 1-10분 소요됩니다. 대부분 10분 이내에 반영됩니다.
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        출금도 암호화폐로만 가능한가요?
-                    </div>
-                    <div class="faq-answer">
-                        네, Stake는 암호화폐 전용 카지노이므로 모든 입출금이 암호화폐로만 가능합니다. 출금 한도나 횟수 제한은 없으며, 24시간 언제든 출금 신청이 가능합니다.
-                    </div>
+                
+                <div class="exchange-recommend">
+                    <h3>추천 암호화폐 거래소</h3>
+                    <p>한국에서 이용 가능한 주요 거래소에서 암호화폐를 구매할 수 있습니다:</p>
+                    <ul class="exchange-list">
+                        <li><strong>업비트</strong> - 한국 최대 거래소, 다양한 암호화폐 지원</li>
+                        <li><strong>빗썸</strong> - 오랜 역사, 안정적인 서비스</li>
+                        <li><strong>바이낸스</strong> - 글로벌 최대 거래소, 낮은 수수료</li>
+                        <li><strong>바이비트</strong> - USDT 거래 특화</li>
+                    </ul>
                 </div>
             </div>
         </div>
