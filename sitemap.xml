@@ -1,9 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+    <!-- 스테이크 카지노 비트코인 USDT 입금 페이지 -->
     <url>
-        <loc>https://stakepokers.com/index.html</loc>
-        <lastmod>2025-01-01</lastmod>
-        <changefreq>monthly</changefreq>
+        <loc>https://stakepokers.com/</loc>
+        <lastmod>2025-10-11</lastmod>
+        <changefreq>weekly</changefreq>
         <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://stakepokers.com/ethereum-account-create.jpg</image:loc>
+            <image:title>스테이크 카지노 이더리움 계정 생성 players1</image:title>
+            <image:caption>암호화폐 카지노 추천인 players1 가입 화면</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://stakepokers.com/bitcoin-wallet-prepare.jpg</image:loc>
+            <image:title>스테이크 카지노 비트코인 지갑 준비</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://stakepokers.com/crypto-deposit-start.jpg</image:loc>
+            <image:title>암호화폐 카지노 입금 시작</image:title>
+        </image:image>
     </url>
 </urlset>
