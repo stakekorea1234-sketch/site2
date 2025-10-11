@@ -43,26 +43,42 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "스테이크닷컴 회원가입은 어떻게 하나요?",
+          "name": "비트코인으로 어떻게 입금하나요?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "스테이크닷컴 회원가입은 Stake.com에 접속하여 이메일과 비밀번호만으로 간단하게 가입할 수 있습니다. 보너스코드 players1을 입력하면 최대 $500 혜택을 받을 수 있습니다."
+            "text": "Wallet 메뉴에서 Bitcoin(BTC)를 선택하고 입금 주소를 생성합니다. 업비트 등 거래소나 개인 지갑에서 해당 주소로 비트코인을 전송하면 블록체인 확인 후 입금됩니다."
           }
         },
         {
           "@type": "Question",
-          "name": "스테이크닷컴 보너스코드 players1 혜택은 무엇인가요?",
+          "name": "USDT 네트워크는 어떤 걸 선택해야 하나요?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "스테이크닷컴 회원가입 시 보너스코드 players1을 입력하면 최대 $500 보너스 혜택을 받을 수 있습니다."
+            "text": "USDT는 ERC-20(이더리움), TRC-20(트론), BEP-20(바이낸스) 등 여러 네트워크를 지원합니다. TRC-20이 수수료가 가장 저렴하며, 본인의 출금 지갑과 동일한 네트워크를 선택해야 합니다."
           }
         },
         {
           "@type": "Question",
-          "name": "어떤 암호화폐로 입금할 수 있나요?",
+          "name": "입금 수수료는 얼마인가요?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "비트코인, 이더리움, USDT 등 22종의 암호화폐로 간편하게 입금할 수 있습니다."
+            "text": "스테이크닷컴은 입금 수수료를 부과하지 않습니다. 다만 블록체인 네트워크 수수료는 발생하며, 네트워크별로 수수료가 다릅니다. TRC-20이 가장 저렴하고, ERC-20은 가스비가 높을 수 있습니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "입금이 얼마나 걸리나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "비트코인은 평균 10-30분, USDT는 네트워크에 따라 5-15분 소요됩니다. 블록체인 혹잡도에 따라 시간이 변동될 수 있으며, 네트워크 확인 후 자동 입금됩니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "최소 입금 금액이 있나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "암호화폐별로 최소 입금 금액이 다릅니다. 정확한 금액은 입금 시 Wallet 메뉴에서 확인할 수 있으며, 최소 금액 미만 입금 시 반영되지 않을 수 있습니다."
           }
         }
       ]
@@ -378,6 +394,80 @@
             transform: scale(1.05);
         }
         
+        .faq-section {
+            margin: 80px 0;
+        }
+        
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            margin-bottom: 16px;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+        
+        .faq-item:hover {
+            background: rgba(255,255,255,0.06);
+            border-color: #00ff88;
+        }
+        
+        .faq-question {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 20px 25px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .faq-question:hover {
+            background: rgba(0,255,136,0.05);
+        }
+        
+        .faq-icon {
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+        
+        .faq-text {
+            flex: 1;
+            font-size: 18px;
+            font-weight: 600;
+            color: #fff;
+        }
+        
+        .faq-arrow {
+            font-size: 28px;
+            color: #00ff88;
+            transition: transform 0.3s;
+            flex-shrink: 0;
+        }
+        
+        .faq-item.active .faq-arrow {
+            transform: rotate(90deg);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            padding: 0 25px;
+            color: rgba(255,255,255,0.7);
+            line-height: 1.8;
+            font-size: 16px;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 0 25px 25px;
+        }
+        
         .footer {
             text-align: center;
             padding: 60px 0 40px;
@@ -513,6 +603,67 @@
                 <p class="bonus-description">스테이크닷컴 회원가입 시 보너스코드 players1 입력하면 최대 $500! 비트코인, USDT 암호화폐로 간편 입금.</p>
                 <a href="https://stake.com/ko?offer=players1" target="_blank" rel="sponsored noopener" class="bonus-button">지금 회원가입하기 →</a>
             </div>
+
+            <!-- FAQ Section -->
+            <div class="faq-section">
+                <h2 class="crypto-section-title">자주 묻는 질문</h2>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span class="faq-icon">❓</span>
+                            <span class="faq-text">비트코인으로 어떻게 입금하나요?</span>
+                            <span class="faq-arrow">›</span>
+                        </div>
+                        <div class="faq-answer">
+                            Wallet 메뉴에서 Bitcoin(BTC)를 선택하고 입금 주소를 생성합니다. 업비트 등 거래소나 개인 지갑에서 해당 주소로 비트코인을 전송하면 블록체인 확인 후 입금됩니다. 주소 복사 시 정확히 복사해야 하며, 잘못된 주소로 전송 시 복구가 불가능합니다.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span class="faq-icon">❓</span>
+                            <span class="faq-text">USDT 네트워크는 어떤 걸 선택해야 하나요?</span>
+                            <span class="faq-arrow">›</span>
+                        </div>
+                        <div class="faq-answer">
+                            USDT는 ERC-20(이더리움), TRC-20(트론), BEP-20(바이낸스) 등 여러 네트워크를 지원합니다. TRC-20이 수수료가 가장 저렴하며(약 1-2 USDT), 본인의 출금 지갑과 동일한 네트워크를 선택해야 합니다. 네트워크가 다르면 입금되지 않으므로 주의하세요.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span class="faq-icon">❓</span>
+                            <span class="faq-text">입금 수수료는 얼마인가요?</span>
+                            <span class="faq-arrow">›</span>
+                        </div>
+                        <div class="faq-answer">
+                            스테이크닷컴은 입금 수수료를 부과하지 않습니다. 다만 블록체인 네트워크 수수료는 발생하며, 네트워크별로 수수료가 다릅니다. TRC-20(약 1-2 USDT)이 가장 저렴하고, ERC-20(이더리움)은 가스비가 높을 수 있습니다(10-50 USDT). 비트코인은 네트워크 혼잡도에 따라 변동됩니다.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span class="faq-icon">❓</span>
+                            <span class="faq-text">입금이 얼마나 걸리나요?</span>
+                            <span class="faq-arrow">›</span>
+                        </div>
+                        <div class="faq-answer">
+                            비트코인은 평균 10-30분, USDT는 네트워크에 따라 5-15분 소요됩니다. TRC-20이 가장 빠르며, 블록체인 혼잡도에 따라 시간이 변동될 수 있습니다. 네트워크 확인(Confirmation) 완료 후 자동으로 잔액에 반영됩니다.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span class="faq-icon">❓</span>
+                            <span class="faq-text">최소 입금 금액이 있나요?</span>
+                            <span class="faq-arrow">›</span>
+                        </div>
+                        <div class="faq-answer">
+                            암호화폐별로 최소 입금 금액이 다릅니다. 정확한 금액은 입금 시 Wallet 메뉴에서 확인할 수 있으며, 최소 금액 미만 입금 시 반영되지 않을 수 있습니다. 일반적으로 USDT는 10-20 USDT, 비트코인은 약 0.0005 BTC 정도가 최소 금액입니다.
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -526,5 +677,28 @@
     </footer>
 
     <script src="modules/crypto-app.js"></script>
+    <script>
+        // FAQ 아코디언 기능
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                
+                question.addEventListener('click', () => {
+                    // 현재 클릭된 항목이 이미 활성화되어 있는지 확인
+                    const isActive = item.classList.contains('active');
+                    
+                    // 모든 FAQ 항목 닫기
+                    faqItems.forEach(faq => faq.classList.remove('active'));
+                    
+                    // 현재 항목이 비활성화 상태였다면 열기
+                    if (!isActive) {
+                        item.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
